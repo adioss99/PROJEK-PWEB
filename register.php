@@ -1,17 +1,26 @@
-<!-- <?php
+<?php
+require 'model/db.php';
+session_start();
 
-// if(isset($_POST["register"])){
-//     if(registrasi($_POST) > 0 ){
-//         echo "
-//         <script>
-//             alert('User baru berhasil ditambahkan')
-//         </script>";
-//     }else{
-//         echo mysqli_error($conn);
-//     }
-// }
+// comment ini
+if(!isset($_SESSION["login"])){
+    header("Location: index.html");
+}
 
-?> -->
+if(isset($_POST["register"])){
+    // var_dump($_POST);
+    if(register($_POST) > 0 ){
+        echo "
+        <script>
+            alert('User baru berhasil ditambahkan')
+        </script>";
+        header("Location: admin.php");
+    }else{
+        echo mysqli_error($conn);
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +52,12 @@
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <form action="" method="POST">
                         <div class="card-body p-5">
                             <h3 class="text-center">Registrasi</h3>
                             <div class="form-outline mb-3">
-                                <label class="form-label" for="email">Nama</label>
-                                <input type="email" id="email" name="email" class="form-control form-control-lg" style="border-color: #06283D;" required/>
+                                <label class="form-label" for="name">Nama</label>
+                                <input type="name" id="name" name="name" class="form-control form-control-lg" style="border-color: #06283D;" required/>
                             </div>
                             <div class="form-outline mb-3">
                                 <label class="form-label" for="email">Email</label>
@@ -66,6 +76,7 @@
                                 <a class="btn-sm text-danger"href="index.html"><i class="fa-solid fa-arrow-left" ></i> Kembali</a>
                             </div>
                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
