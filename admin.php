@@ -46,6 +46,12 @@ if(!isset($_SESSION["login"])){
                         Register
                     </a>
                 </li>
+                <li class="nav-item" style="margin-right: 30px;">
+                    <a class="btn btn-primary" href="create.php"
+                        style="width: 80px; border-radius: 20px;">
+                        Create
+                    </a>
+                </li>
             </ul>
         </nav>
         <h1>

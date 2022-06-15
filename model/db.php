@@ -1,6 +1,16 @@
 <?php
 
-$conn = mysqli_connect("localhost","root","","uas");
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "uas";
+
+define("HOST",$host);
+define("USER",$user);
+define("PASS",$pass);
+define("DB",$db);
+
+$conn = mysqli_connect($host,$user,$pass,$db);
 
 // registrasi
 function register($data){

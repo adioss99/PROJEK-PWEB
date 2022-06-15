@@ -27,7 +27,7 @@ if(isset($_POST["register"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/create.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     </script>
@@ -42,7 +42,10 @@ if(isset($_POST["register"])){
     <title>Register | Admin</title>
     <style>
         body{
-            background-color: #1363DF;
+            background-color: #06283D;
+        }
+        label{
+            color: #06283D;
         }
     </style>
 </head>
@@ -73,7 +76,7 @@ if(isset($_POST["register"])){
                             </div>
                             <button class="btn btn-primary btn-lg btn-block mt-3"style="background-color: #06283D;" type="submit" name="register">Register</button>
                             <div class="mt-1">
-                                <a class="btn-sm text-danger"href="index.html"><i class="fa-solid fa-arrow-left" ></i> Kembali</a>
+                                <a class="btn-sm text-danger"href="admin.php"><i class="fa-solid fa-arrow-left" ></i> Kembali</a>
                             </div>
                        </div>
                     </form>

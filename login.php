@@ -37,17 +37,26 @@ if(isset($_POST["login"])){
     <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=Poppins:wght@800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b6eec55ff3.js" crossorigin="anonymous"></script>
     <title>Login </title>
+    <style>
+        
+        body{
+            background-color: #06283D;
+        }
+        label{
+            color: #06283D;
+        }
+    </style>
 </head>
 
 <body>           
-    <section class="vh-100" style="background-color: #1363DF;">
+    <section class="vh-100">
         <div class="container py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <form action="" method="post">
                             <div class="card-body p-5">
-                                <div style="color: #06283D;" class=" text-center">
+                                <div class=" text-center">
                                     <i class="fa-solid fa-user-gear text-center fa-2xl"></i>
                                     <h3 class="mb-5">Admin Area</h3>
                                 </div>
